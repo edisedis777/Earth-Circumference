@@ -2,6 +2,8 @@
 
 ![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)
 
+![Screenshot](https://github.com/user-attachments/assets/962094fa-4929-4aea-978e-2e94140ef662)
+
 
 
 Explore how Eratosthenes measured Earth's circumference over 2,200 years ago using simple observations and geometry. This interactive web application brings his ancient experiment to life with dynamic visualizations and user controls.
