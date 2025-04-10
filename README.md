@@ -34,25 +34,11 @@ Try the live demo [here](#)
 
 ## Installation
 
-To run this project locally:
+To run this project, simply open it in the browser:
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/username/eratosthenes-circumference.git
-   cd eratosthenes-circumference
-   ```
-
-2. **Open in Browser:**
+**Open in Browser:**
    - Simply open `index.html` in a modern web browser (e.g., Chrome, Firefox, Edge).
    - No server or dependencies required!
-
-3. **Optional: Serve Locally:**
-   If you prefer a local server:
-   ```bash
-   # Using Python
-   python -m http.server 8000
-   ```
-   Then navigate to `http://localhost:8000` in your browser.
 
 ## Usage
 
