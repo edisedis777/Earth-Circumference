@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How Eratosthenes Measured Earth's Circumference</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <button
+        id="darkModeBtn"
+        style="position: absolute; top: 10px; right: 10px">
+        Toggle Dark Mode
+      </button>
+      <h1>How Eratosthenes Measured Earth's Circumference</h1>
+
+      <div class="container">
+        <h2>The Story</h2>
+        <p>
+          Around 240 BCE, Eratosthenes, a Greek mathematician and the chief
+          librarian at the Library of Alexandria, made one of the most
+          remarkable measurements in ancient science—he calculated the
+          circumference of the Earth with surprising accuracy using just simple
+          observations and geometry.
+        </p>
+        <div class="info-box">
+          <p>
+            <strong>Key observation:</strong> Eratosthenes noticed that at noon
+            on the summer solstice, the Sun cast no shadow in Syene (modern-day
+            Aswan, Egypt), while in Alexandria, about 800 km to the north, it
+            cast a measurable shadow.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <h2>The Experiment</h2>
+        <div class="flex-container">
+          <div class="flex-item">
+            <p>Eratosthenes' experiment relied on two critical observations:</p>
+            <ol>
+              <li>
+                At noon on the summer solstice in Syene, the Sun's rays shone
+                directly down a deep well, casting no shadow—meaning the Sun was
+                directly overhead.
+              </li>
+              <li>
+                At the same time in Alexandria, a vertical stick cast a shadow,
+                indicating the Sun was not directly overhead.
+              </li>
+            </ol>
+            <p>
+              By measuring the angle of the shadow in Alexandria (about 7.2°),
+              Eratosthenes determined this was the same angle subtended at the
+              center of the Earth between Alexandria and Syene.
+            </p>
+          </div>
+          <div class="flex-item">
+            <div class="info-box">
+              <p>
+                <strong>The insight:</strong> Since 7.2° is approximately 1/50
+                of a full circle (360°), the distance between Alexandria and
+                Syene (about 800 kilometers or 5,000 stadia) must be 1/50 of
+                Earth's total circumference!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="interactive" id="experiment-interactive">
+          <h3>Interactive Demonstration</h3>
+          <canvas id="sunCanvas"></canvas>
+          <div class="controls">
+            <div class="slider-container">
+              <label for="timeSlider">Time of day:</label>
+              <input
+                type="range"
+                id="timeSlider"
+                min="0"
+                max="100"
+                value="50" />
+              <div class="slider-value" id="timeValue">Noon</div>
+            </div>
+            <button id="resetBtn">Reset</button>
+          </div>
+          <p id="explanation">
+            The Sun's rays at different locations create different shadow
+            angles, which reveal Earth's curvature.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <h2>The Calculation</h2>
+        <div class="interactive">
+          <p>Eratosthenes used the following logic:</p>
+          <div class="calculation">
+            <p>
+              If the shadow angle is <span id="shadowAngle">7.2</span>° and this
+              represents the angle between the two cities as seen from Earth's
+              center...
+            </p>
+            <p>
+              And the distance between cities is
+              <span id="cityDistance">5000</span> stadia...
+            </p>
+            <p>
+              Then Earth's circumference =
+              <span id="cityDistance2">5000</span> stadia × (360° ÷
+              <span id="shadowAngle2">7.2</span>°)
+            </p>
+            <p>
+              Earth's circumference =
+              <span id="earthCircumference">250,000</span> stadia (about 40,000
+              km in modern units)
+            </p>
+          </div>
+          <div class="controls">
+            <div class="slider-container">
+              <label for="angleSlider">Shadow angle:</label>
+              <input
+                type="range"
+                id="angleSlider"
+                min="1"
+                max="15"
+                value="7.2"
+                step="0.1" />
+              <div class="slider-value" id="angleValue">7.2°</div>
+            </div>
+            <div class="slider-container">
+              <label for="distanceSlider">Distance (stadia):</label>
+              <input
+                type="range"
+                id="distanceSlider"
+                min="1000"
+                max="10000"
+                value="5000"
+                step="100" />
+              <div class="slider-value" id="distanceValue">5000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <h2>Earth Model</h2>
+        <div class="interactive">
+          <canvas id="earthCanvas"></canvas>
+          <div class="controls">
+            <button id="rotateBtn">Rotate Earth</button>
+            <button id="showAnglesBtn">Toggle Angles</button>
+          </div>
+          <p>
+            This model shows how the shadow measurements from different cities
+            can reveal Earth's curvature and size.
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <h2>Historical Significance</h2>
+        <p>
+          Eratosthenes' calculation gave a circumference of about 250,000
+          stadia, which is remarkably close to the modern value of about 40,000
+          km (depending on which ancient stadion length is used for conversion).
+        </p>
+        <p>
+          This experiment, conducted over 2,200 years ago with simple tools,
+          demonstrates how careful observation and mathematical reasoning can
+          reveal fundamental truths about our world.
+        </p>
+        <div class="info-box">
+          <p>
+            <strong>Fun fact:</strong> Eratosthenes didn't need to travel
+            between the two cities himself. He learned about the no-shadow
+            phenomenon in Syene from records and measured the shadow in
+            Alexandria where he lived.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,255 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #fafafa;
+}
+
+.main-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px;
+  position: relative; /* For absolute positioning of dark mode button */
+}
+
+h1,
+h2,
+h3 {
+  color: #2c3e50;
+  margin-top: 1.5rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.container {
+  margin-bottom: 2rem;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.interactive {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  margin: 20px 0;
+}
+
+#experiment-interactive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+canvas {
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  max-width: 100%;
+}
+
+#sunCanvas,
+#earthCanvas {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  aspect-ratio: 1.5;
+}
+
+.controls {
+  margin: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+input[type="range"] {
+  width: 100%;
+  max-width: 200px;
+}
+
+.calculation {
+  background-color: #e8f4f8;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.flex-item {
+  flex: 1;
+  min-width: 250px;
+}
+
+.info-box {
+  background-color: #e8f8f5;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  border-left: 4px solid #2ecc71;
+}
+
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 250px;
+  margin: 0.5rem 0;
+}
+
+.slider-container label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.slider-value {
+  min-width: 50px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 5px;
+  padding: 2px 5px;
+  background-color: #e8f4f8;
+  border-radius: 4px;
+}
+
+#timeValue {
+  transition: opacity 0.3s;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .container {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .interactive {
+    padding: 15px;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slider-container {
+    max-width: 100%;
+  }
+
+  ol,
+  ul {
+    padding-left: 20px;
+  }
+}
+
+/* High contrast mode for accessibility */
+@media (prefers-contrast: high) {
+  body {
+    color: #000;
+    background-color: #fff;
+  }
+
+  .info-box {
+    border: 2px solid #000;
+  }
+
+  button {
+    border: 2px solid #000;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  button,
+  .slider-value {
+    transition: none;
+  }
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .container {
+  background-color: #444;
+}
+
+.dark-mode .info-box {
+  background-color: #555;
+  border-left-color: #2ecc71;
+}
+
+.dark-mode button {
+  background-color: #2980b9;
+}
+
+.dark-mode .interactive {
+  background-color: #555;
+}
+
+.dark-mode canvas {
+  border-color: #666;
+}
+
+.dark-mode .calculation {
+  background-color: #3a5f6f;
+}
+
+.dark-mode .slider-value {
+  background-color: #3a5f6f;
+}
+
+/* Adjust heading colors in dark mode */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3 {
+  color: #fff;
+}
