@@ -1,9 +1,6 @@
 # Eratosthenes Earth Circumference Visualization
 
-![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)
-
 ![Screenshot](https://github.com/user-attachments/assets/962094fa-4929-4aea-978e-2e94140ef662)
-
 
 
 Explore how Eratosthenes measured Earth's circumference over 2,200 years ago using simple observations and geometry. This interactive web application brings his ancient experiment to life with dynamic visualizations and user controls.
@@ -18,11 +15,9 @@ Explore how Eratosthenes measured Earth's circumference over 2,200 years ago usi
 - [License](#license)
 
 ## Overview
-
 In 240 BCE, Eratosthenes calculated Earth's circumference with remarkable accuracy by observing shadows in Syene and Alexandria. This project recreates his method through an educational and interactive interface built with HTML, CSS, and JavaScript. Users can adjust time of day, shadow angles, and city distances to see how these variables affect the calculated circumference, visualized on both a 2D sun demo and a 3D Earth model.
 
 ## Features
-
 - **Interactive Sun Demo:** Adjust the time of day to see how shadows change in Syene and Alexandria.
 - **Earth Model:** Visualize the angular difference and distance between cities on a rotating Earth.
 - **Dynamic Calculations:** Modify shadow angle and distance to recalculate Earth's circumference in real-time.
@@ -31,8 +26,7 @@ In 240 BCE, Eratosthenes calculated Earth's circumference with remarkable accura
 - **Accessibility:** Includes ARIA live regions for screen reader support.
 
 ## Demo
-
-Try the live demo [here](https://edisedis777.github.io/Earth-Circumference/)
+Live demo [here](https://edisedis777.github.io/Earth-Circumference/)
 
 ## Installation
 
@@ -43,7 +37,6 @@ To run this project, simply open it in the browser:
    - No server or dependencies required!
 
 ## Usage
-
 1. **Sun Demo Section:**
    - Use the "Time of Day" slider to move the sun and observe shadow changes.
    - Click "Reset" to return to noon.
@@ -62,9 +55,7 @@ To run this project, simply open it in the browser:
 
 
 ## Contributing
-
 Contributions are welcome!
 
 ## License
-
-This project is licensed under the [MIT License](LICENSE). 
+Distributed under the GNU Affero General Public License v3.0 License. See `LICENSE` for more information.
